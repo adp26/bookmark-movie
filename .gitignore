@@ -1,0 +1,68 @@
+# Node modules directory
+node_modules/
+
+# Build output directories
+build/
+dist/
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Diagnostic reports
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm/
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# dotenv environment variables file
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Tailwind CSS config cache
+.tailwindcss/
+
+# Parcel-bundler cache (for projects using Parcel)
+.cache/
+
+# Temporary files
+*.tmp
+*.temp
+
+# macOS System files
+.DS_Store
+
+# Windows System files
+Thumbs.db
+ehthumbs.db
+
+# IDE and editor specific files
+.vscode/
+.idea/
+*.sublime-workspace
+*.code-workspace
+.history/
+
+# Local environment settings
+.local/
+
+# JetBrains IDE files
+.idea/
+*.iml
+
+# Visual Studio Code files
+.vscode/
