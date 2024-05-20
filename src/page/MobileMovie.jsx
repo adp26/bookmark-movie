@@ -1,4 +1,3 @@
-import BookmarkIcon from "../ui/icon/BookmarkIcon";
 import Rating from "../ui/StarIcon";
 
 function Bookmark({ isBookmark = true }) {

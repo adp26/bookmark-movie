@@ -101,7 +101,7 @@ function Movies() {
 
 
 
-        <div className="flex flex-wrap flex-row gap-3  md:gap-6">
+        <div className="flex flex-wrap flex-row gap-3 justify-center sm:justify-start  md:gap-6">
 
 
 

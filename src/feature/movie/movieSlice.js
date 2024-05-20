@@ -24,7 +24,6 @@ const movieSlice = createSlice({
   initialState,
   reducers: {
     addBookmark(state, action) {
-      console.log(action.payload.id);
       state.movie = state.movie.map((val) =>
         val.id === action.payload.id
           ? { ...val, bookmark: !action.payload.bookmark }

@@ -1,5 +1,5 @@
 
-import { Children, useEffect } from "react";
+import { useEffect } from "react";
 import Header from "./Header";
 import { useDispatch } from "react-redux";
 import { getGenres, getLanguages, getMovies } from "../services/apiMovie";

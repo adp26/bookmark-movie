@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import BookmarkIcon from "../ui/icon/BookmarkIcon";
 import Rating from "../ui/StarIcon";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addBookmark } from "../feature/movie/movieSlice";
 
 function Movie({ item }) {

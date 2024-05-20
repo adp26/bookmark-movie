@@ -11,7 +11,7 @@ const OptionButton = ({ id }) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     useEffect(() => {
-        console.log('optionbutton')
+
         const handleOutsideClick = (event) => {
             if (popupRef.current && !popupRef.current.contains(event.target)) {
                 setIsPopupOpen(false);

@@ -5,7 +5,7 @@ const DropdownInput = ({ options, register, isMultiSelect }) => {
     const dropdownRef = useRef(null);
 
     useEffect(() => {
-        console.log('dropdowninput')
+
         const handleClickOutside = (event) => {
             if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
                 setIsOpen(false);

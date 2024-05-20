@@ -4,11 +4,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { addBookmark, getGenre, getMovieById } from "../feature/movie/movieSlice";
 import Plus from "../ui/icon/Plus";
 import BackButton from "../ui/icon/BackButton";
-import { useState } from "react";
+
 
 function DetailMovie() {
-    const [isDarkMode, setIsDarkMode] = useState(localStorage.getItem('dark'));
-    console.log(isDarkMode)
+
     const { idmovie } = useParams();
     const navigate = useNavigate();
     const dispatch = useDispatch();
@@ -42,7 +41,7 @@ function DetailMovie() {
     return (<div className="
             text-slate-100
             relative
-            overflow-hidden
+            
             block
             z-10
             bg-cover
@@ -58,7 +57,9 @@ function DetailMovie() {
             dark:before:from-black
             dark:before:to-black/50
             before:opacity-50
-            before:z-[-5]" style={handleUrlBackrop(backdrop_path)}>
+            before:z-[-5]
+           
+            " style={handleUrlBackrop(backdrop_path)}>
 
 
         <div className="self-start pt-5 ml-5 sm:ml-20 text-white gap-3 flex flex-row cursor-pointer" onClick={() => navigate('/movies')}>
@@ -67,7 +68,7 @@ function DetailMovie() {
             Back
         </div>
 
-        <div className="flex flex-col md:flex-row items-start mt-10  md:mt-20 md:mx-20 md:h-full">
+        <div className="flex flex-col mb-10 md:flex-row items-start mt-10  md:mt-20 md:mx-20">
             <img className="ml-20  object-cover md:object-fill h-72 w-64 lg:h-3/5 lg:w-80 rounded-lg shadow-xl dark:shadow-gray-800" src={poster_path.slice(0, 5) == 'https' ? poster_path : `https://image.tmdb.org/t/p/w500${poster_path}`} alt="Poster of [object Object]" />
             <div className="flex flex-col ml-20 mt-10 md:mt-0 space-y-5">
                 <div className="inline-flex items-start lg:items-center gap-4">
@@ -83,8 +84,8 @@ function DetailMovie() {
                     {/* <span> • 1995</span> */}
                     <span className="text-xs md:text-md lg:text-xl"> • {convertDateToYear(release_date)}</span>
                 </div>
-                <p className="pe-10 md:pr-24 text-lg sm:text-xl lg:text-2xl">{overview}</p>
-                {!bookmark && <div onClick={() => dispatch(addBookmark({ id, bookmark }))} className="flex flex-row bg-indigo-500 w-40 rounded-md p-2 gap-x-1 justify-center items-center cursor-pointer">
+                <p className="pe-10  md:pr-24 text-lg sm:text-xl lg:text-2xl">{overview}</p>
+                {!bookmark && <div onClick={() => dispatch(addBookmark({ id, bookmark }))} className=" flex flex-row bg-indigo-500 w-40 rounded-md p-2 gap-x-1 justify-center items-center cursor-pointer">
 
                     <button className="">Add bookmark </button>
                     <Plus />
