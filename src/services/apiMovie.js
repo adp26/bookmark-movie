@@ -1,15 +1,16 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import { apiKey } from "../config";
 
 const API_MOVIES_URL = "https://api.themoviedb.org/3/discover/movie";
 const API_LANGUAGES_URL =
   "https://api.themoviedb.org/3/configuration/languages";
 const API_GENRES_URL = "https://api.themoviedb.org/3/genre/movie/list";
+
 const options = {
   headers: {
     accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjNWY5YjkwZWRjNTU2YmM0YWEwMWEzOGRiNTc2N2ZhZSIsInN1YiI6IjY2NDFmZTJmNzZlNWVjMWFlNDk2ODM5MyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.6Sr52-fwLdNVIW5XtBa0938fLkzeoAHPlcHamotg7sI",
+    Authorization: `Bearer ${apiKey}`,
   },
 };
 
