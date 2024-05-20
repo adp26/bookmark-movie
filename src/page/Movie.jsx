@@ -30,7 +30,7 @@ function Movie({ item }) {
 
           {/* button add to bookmark */}
           <button
-            className="!absolute  top-4 right-4 h-8 max-h-[32px] w-8 max-w-[32px] select-none rounded-full text-center align-middle font-sans text-xs font-medium uppercase text-red-500 transition-all hover:bg-red-500/10 active:bg-red-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+            className="!absolute  top-4 right-4 h-8 max-h-[32px] w-8 max-w-[32px] select-none rounded-full text-center align-middle  text-xs font-medium uppercase text-red-500 transition-all hover:bg-red-500/10 active:bg-red-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
             type="button">
             <span className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
 
@@ -48,7 +48,7 @@ function Movie({ item }) {
         <div className="px-5 my-3">
           {/* tag title */}
           <div className="flex items-center justify-between ">
-            <h5 className="block font-sans text-md antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+            <h5 className="block  text-md antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
               {title}
             </h5>
 
@@ -61,7 +61,7 @@ function Movie({ item }) {
           <Link to={`/movies/${id}`}>
 
             <button
-              className="block w-auto select-none rounded-lg bg-indigo-500 py-3.5 px-7 text-center align-middle font-sans text-sm font-bold titlecase text-slate-100 shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-indigo-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+              className="block w-auto select-none rounded-lg bg-indigo-500 py-3.5 px-7 text-center align-middle  text-sm font-bold titlecase text-slate-100 shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-indigo-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
               type="button">
               See More
             </button>

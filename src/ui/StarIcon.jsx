@@ -9,7 +9,7 @@ function Rating({ average, count }) {
     <div>
 
       <p
-        className="flex items-center justify-center gap-1.5 font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased">
+        className="flex items-center justify-center gap-1.5  text-base font-normal leading-relaxed text-blue-gray-900 antialiased">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
           className="-mt-0.5 h-5 w-5 text-yellow-700">
           <path fillRule="evenodd"

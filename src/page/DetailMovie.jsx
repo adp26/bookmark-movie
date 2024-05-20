@@ -41,7 +41,6 @@ function DetailMovie() {
     return (<div className="
             text-slate-100
             relative
-            
             block
             z-10
             bg-cover
@@ -81,7 +80,7 @@ function DetailMovie() {
                         <span key={genre} className="inline-flex items-center border-white border rounded-lg  px-2 py-1 text-l font-medium text-slate-100 text-xs md:text-md lg:text-lg ring-1 ring-inset ring-purple-700/10">{convertIdGenreToText(genre)}</span>
                     )}
 
-                    {/* <span> • 1995</span> */}
+
                     <span className="text-xs md:text-md lg:text-xl"> • {convertDateToYear(release_date)}</span>
                 </div>
                 <p className="pe-10  md:pr-24 text-lg sm:text-xl lg:text-2xl">{overview}</p>

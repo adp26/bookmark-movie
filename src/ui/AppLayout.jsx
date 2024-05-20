@@ -18,7 +18,7 @@ function AppLayout({ children }) {
   }, [])
 
   return (
-    <div className="grid h-screen grid-rows-[auto_1fr]">
+    <div className="grid h-screen grid-rows-[auto_1fr] font-montserrat">
       <Header />
       {children}
     </div>

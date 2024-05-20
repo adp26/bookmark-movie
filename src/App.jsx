@@ -4,7 +4,7 @@ import AppLayout from "./ui/AppLayout";
 import DetailMovie from "./page/DetailMovie";
 import Bookmarks from "./page/Bookmarks";
 import UpdateMovie from "./feature/movie/UpdateMovie";
-import CreateMovie from "./feature/movie/CreateMovie";
+import CreateMovie from "./feature/movie/create/CreateMovie";
 
 
 

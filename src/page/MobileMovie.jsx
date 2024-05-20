@@ -21,7 +21,7 @@ function Bookmark({ isBookmark = true }) {
             <div>
                 <div className="px-5">
                     <div className="flex items-center justify-between ">
-                        <h5 className="block font-sans text-md antialiased font-medium leading-snug tracking-normal text-blue-gray-900">
+                        <h5 className="block  text-md antialiased font-medium leading-snug tracking-normal text-blue-gray-900">
                             Title of movie
                         </h5>
 
@@ -35,7 +35,7 @@ function Bookmark({ isBookmark = true }) {
                 <Rating average={3.4} count={2000} />
                 <div className="p-6 self-center">
                     <button
-                        className="block w-auto select-none rounded-lg bg-gray-900 py-3.5 px-7 text-center align-middle font-sans text-sm font-bold titlecase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                        className="block w-auto select-none rounded-lg bg-gray-900 py-3.5 px-7 text-center align-middle  text-sm font-bold titlecase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                         type="button">
                         remove
                     </button>

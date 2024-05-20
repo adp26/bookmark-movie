@@ -7,6 +7,9 @@ export default {
       backgroundImage: (theme) => ({
         "dark-gradient": "linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.6))",
       }),
+      fontFamily: {
+        montserrat: ["Montserrat", "sans-serif"],
+      },
     },
   },
   plugins: [],
