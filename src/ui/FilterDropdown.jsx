@@ -20,9 +20,9 @@ const FilterDropdown = () => {
     const genres = useSelector(getGenre);
 
     const genreList = genres.map(val => val.name);
-    const genreSelected = useSelector(state => state.movie.filterByGenre);
-    const ratingSelected = useSelector(state => state.movie.filterByRating);
-    const releaseSelected = useSelector(state => state.movie.filterByRelease);
+    const genreSelected = useSelector(state => state.filterByGenre);
+    const ratingSelected = useSelector(state => state.filterByRating);
+    const releaseSelected = useSelector(state => state.filterByRelease);
 
 
 

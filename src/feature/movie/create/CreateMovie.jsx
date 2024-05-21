@@ -23,9 +23,6 @@ const CreateMovie = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-
-
-
     const { register, control, handleSubmit, formState: { errors }, setValue, reset } = useForm();
 
     const movie = useSelector(getMovieById(location.state - 1));

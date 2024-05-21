@@ -39,7 +39,7 @@ const OptionButton = ({ id }) => {
     };
 
     return (
-        <div className="relative flex-row text-left" ref={popupRef}>
+        <div className="relative flex-row text-left ml-0" ref={popupRef}>
             {isPopupOpen && (
                 <div
                     className="absolute  right-0 translate-y-12 ml-12 w-32  md:w-56  rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"

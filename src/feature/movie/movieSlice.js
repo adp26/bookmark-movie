@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { getGenres, getLanguages, getMovies } from "../../services/apiMovie";
 
 const initialState = {
+  addState: 0,
   movie: [],
   manipulateMovie: [],
   genre: [],
@@ -90,9 +91,6 @@ const movieSlice = createSlice({
       state.movie = state.movie.filter((item) => item.id !== action.payload);
       state.manipulateMovie = state.movie;
     },
-    resetItem: (state) => {
-      state = initialState;
-    },
   },
   extraReducers: (builder) => {
     builder
@@ -101,12 +99,16 @@ const movieSlice = createSlice({
       })
       .addCase(getMovies.fulfilled, (state, action) => {
         state.status = "succeeded";
-
-        state.movie = [...state.movie, ...action.payload].map((data, index) => {
-          return { ...data, id: index, bookmark: false };
-        });
+        if (state.addState < 3) {
+          state.addState += 1;
+          state.movie = [...state.movie, ...action.payload].map(
+            (data, index) => {
+              return { ...data, id: index, bookmark: false };
+            }
+          );
+          state.manipulateMovie = state.movie;
+        }
         state.year = state.movie.map((val) => val.release_date.substring(0, 4));
-        state.manipulateMovie = state.movie;
       })
       .addCase(getMovies.rejected, (state, action) => {
         state.status = "failed";
@@ -194,12 +196,12 @@ export const {
 } = movieSlice.actions;
 
 export default movieSlice.reducer;
-export const getLoading = (state) => state.movie.loading;
-export const getMovie = (state) => state.movie.manipulateMovie;
+export const getLoading = (state) => state.loading;
+export const getMovie = (state) => state.manipulateMovie;
 
-export const getTotalMovie = (state) => state.movie.movie.length;
-export const getGenre = (state) => state.movie.genre;
-export const getLanguage = (state) => state.movie.language;
-export const getYear = (state) => state.movie.year;
+export const getTotalMovie = (state) => state.movie.length;
+export const getGenre = (state) => state.genre;
+export const getLanguage = (state) => state.language;
+export const getYear = (state) => state.year;
 export const getMovieById = (id) => (state) =>
-  state.movie.manipulateMovie.find((val) => val.id === parseInt(id));
+  state.manipulateMovie.find((val) => val.id === parseInt(id));

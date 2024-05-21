@@ -8,7 +8,7 @@ const sortList = ["(A-Z)", "(Z-A)"];
 const SortDropdown = () => {
     const [isOpen, setIsOpen] = useState(false);
     const dispatch = useDispatch();
-    const sortBy = useSelector((state) => state.movie.sortBy);
+    const sortBy = useSelector((state) => state.sortBy);
     const dropdownRef = useRef(null);
 
     const handleToggleDropdown = () => {
